@@ -1,2 +1,10 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title,'HOME')%>
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1>Weipo App | <%=yield(:title) %></h1>
+		<p>This is Home Page for 
+			MY Weipo App
+		</p>
+	</body>
+</html>
