@@ -6,24 +6,34 @@ describe "StaticPages" do
 #      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
 #      get static_pages_index_path
 #      response.status.should be(200)
+
+let(:base_title) {"Weipo App"}
+
 describe "Home Page" do
 	it "should have the content 'Weipo App | HOME'" do
 		visit '/static_pages/home'
-		expect(page).to have_content('HOME')
+		expect(page).to have_content("#{base_title} | HOME")
     end
   end
 
 describe "Help Page" do
 	it "should have the content 'Weipo App | HELP'" do
 		visit '/static_pages/help'
-		expect(page).to have_content('HELP')
+		expect(page).to have_content("#{base_title} | HELP")
     end
   end
 
 describe "About Page" do
 	it "should have the content 'Weipo App | ABOUT'" do
 		visit '/static_pages/about'
-		expect(page).to have_content('ABOUT')
+		expect(page).to have_content("#{base_title} | ABOUT")
+    end
+  end
+
+describe "Contact Page" do
+	it "should have the content 'Weipo App | CONTACT'" do
+		visit '/static_pages/contact'
+		expect(page).to have_content("#{base_title} | CONTACT")
     end
   end
 end
