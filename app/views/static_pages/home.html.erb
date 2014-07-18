@@ -2,9 +2,13 @@
 <!DOCTYPE html>
 <html>
 	<body>
-		<h1>Weipo App | <%=yield(:title) %></h1>
-		<p>This is Home Page for 
-			MY Weipo App
-		</p>
+		<div class="center hero-unit">
+			<h1>Weipo App | <%=yield(:title) %></h1>
+			<p>Share Your Thoughts, Start from <a href="#">My Weipo!</a></p>
+			<br>
+			<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+		</div>
+
+		<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
 	</body>
 </html>
